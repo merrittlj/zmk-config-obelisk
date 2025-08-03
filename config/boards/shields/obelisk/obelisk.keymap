@@ -75,7 +75,7 @@
 		bksp {
 			timeout-ms = <50>;
 			key-positions = <4 5>;
-			bindings = <&kp BKSP>;
+			bindings = <&kp BSPC>;
 			layers = <AL1 AL2 AL2U>;
 		};
 		ret {
@@ -125,7 +125,6 @@
 	behaviors {
 		hm_l: homerow_mods_left {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS_L";
 			#binding-cells = <2>;
 			tapping-term-ms = <300>;
 			quick-tap-ms = <250>;
@@ -135,7 +134,6 @@
 		};
 		hm_r: homerow_mods_right {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS_R";
 			#binding-cells = <2>;
 			tapping-term-ms = <300>;
 			quick-tap-ms = <250>;
@@ -145,7 +143,6 @@
 		};
 		sr: shift_layer {
 			compatible = "zmk,behavior-hold-tap";
-			label = "SHIFT_LAYER";
 			#binding-cells = <2>;
 			tapping-term-ms = <300>;
 			quick_tap_ms = <0>;
@@ -155,7 +152,6 @@
 		};
 		hl_l: homerow_layers_left {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_LAYERS_L";
 			#binding-cells = <2>;
 			tapping-term-ms = <220>;
 			quick-tap-ms = <250>;
@@ -165,7 +161,6 @@
 		};
 		hl_r: homerow_layers_right {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_LAYERS_R";
 			#binding-cells = <2>;
 			tapping-term-ms = <220>;
 			quick-tap-ms = <250>;
@@ -175,7 +170,6 @@
 		};
 		td: tapdance {
 			compatible = "zmk,behavior-hold-tap";
-			label = "TAPDANCE";
 			#binding-cells = <2>;
 			tapping-term-ms = <190>;
 			quick-tap-ms = <250>;
@@ -184,13 +178,11 @@
 		};
 		alpha2macro: behavior_macro_1 {
 			compatible = "zmk,behavior-macro";
-			label = "MACRO1";
 			#binding-cells = <0>;
 			bindings = < &sl AL2 >;
 		};
 		caps_alpha2macro: behavior_macro_2 {
 			compatible = "zmk,behavior-macro";
-			label = "MACRO2";
 			#binding-cells = <0>;
 			bindings = < &sl AL2U >;
 		};
@@ -205,9 +197,9 @@
 
 		alpha1 {
 			bindings = <
-								&hm_l LCTL L	&hm_l LALT G	&hm_l LGUI D		&hm_r RGUI H	&hm_r RALT U	&hm_r RCTL O	  
+								&hm_l LCTRL L	&hm_l LALT G	&hm_l LGUI D		&hm_r RGUI H	&hm_r RALT U	&hm_r RCTRL O	  
 				&hl_l NM1 I		&hl_l SM2 S		&hl_l SM1 R		&hl_l SYS T			&hl_r SYS N		&hl_r SM1 E		&hl_r SM2 A		&hl_r NM1 C
-								&mt LC(LS(LALT)) SPC			&kp LSHIFT 			&key_repeat	    &sl AL2
+								&mt LC(LS(LALT)) SPACE			&kp LSHIFT 			&key_repeat	    &sl AL2
 			>;
 		};
 
@@ -221,7 +213,7 @@
 
 		sym1 {
 			bindings = <
-							&kp EXCL	&kp ATSN	&kp HASH		&kp AMPS		&kp STAR		&kp QMARK
+							&kp EXCL	&kp AT	&kp HASH		&kp AMPS		&kp STAR		&kp QMARK
 				&kp GRAVE	&kp DLLR	&kp PRCNT	&kp CARET		&kp UNDER		&kp BSLH		&kp PIPE &kp TILDE
 							&none	&none							&none	&kp RGUI
 			>;
@@ -237,17 +229,17 @@
 
 		num {
 			bindings = <
-							&hm_l LCTL DOT	&hm_l LALT COMMA	&hm_l LGUI SEMI		&hm_r RGUI N1	&hm_r RALT N2	&hm_r RCTL N3
+							&hm_l LCTRL DOT	&hm_l LALT COMMA	&hm_l LGUI SEMI		&hm_r RGUI N1	&hm_r RALT N2	&hm_r RCTRL N3
 				&kp SLASH	&kp MINUS		&kp PLUS			&kp COLON			&kp N4			&kp N5			&kp N6		&kp EQUAL
-							&kp LSHIFT	&kp EQUAL									&kp RCTL	&kp RGUI
+							&kp LSHIFT	&kp EQUAL									&kp RCTRL	&kp RGUI
 			>;
 		};
 
 		sys {
 			bindings = <
-									&kp ESC			&kp LG(LBRC)		&kp RG(RBRC)		&td LG(V) LG(C)		&kp UP		&td Q BKSP
+									&kp ESC			&kp LG(LBRC)		&kp RG(RBRC)		&td LG(V) LG(C)		&kp UP		&td Q BSPC
 				&td LG(GRAVE) TAB	&td HOME DEL	&td END LG(LBKT)	&kp LG(RBKT)		&td TAB LEFT		&kp DOWN	&td  LG(LS(N5)) RIGHT	&kp RET
-									&kp LSHIFT		&kp LCTL								&kp RALT	&kp RGUI
+									&kp LSHIFT		&kp LCTRL								&kp RALT	&kp RGUI
 			>;
 		};
 
@@ -269,9 +261,9 @@
 
 		img {
 			bindings = <
-							&hm_l LCTL V	&hm_l LALT A	&hm_l LGUI P		&none	&none	&kp BKSP
+							&hm_l LCTRL V	&hm_l LALT A	&hm_l LGUI P		&none	&none	&kp BSPC
 				&kp LSHIFT  &td I G		&td H M		&td J Z						&none	&none	&none	&kp RET
-							&kp SPC		&kp LGUI								&none	&key_repeat
+							&kp SPACE		&kp LGUI								&none	&key_repeat
 			>;
 		};
 	};

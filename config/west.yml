@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: kunsteak
-      url-base: https://github.com/kunsteak 
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
-      remote: kunsteak
-      revision: repeatrollfix-tapdance-macro-mouse-dongle
+      remote: zmkfirmware
+      revision: edf5c0814fd3ea202e43aad2d68fd32e882a518c
       import: app/west.yml
   self:
     path: config
