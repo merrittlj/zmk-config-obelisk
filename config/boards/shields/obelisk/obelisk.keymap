@@ -199,7 +199,7 @@
 			bindings = <
 								&hm_l LCTRL L	&hm_l LALT G	&hm_l LGUI D		&hm_r RGUI H	&hm_r RALT U	&hm_r RCTRL O	  
 				&hl_l NM1 I		&hl_l SM2 S		&hl_l SM1 R		&hl_l SYS T			&hl_r SYS N		&hl_r SM1 E		&hl_r SM2 A		&hl_r NM1 C
-								&mt LC(LS(LALT)) SPACE			&kp LSHIFT 			&key_repeat	    &sl AL2
+								&mt LC(LS(LALT)) SPACE			&kp LSHIFT 			&key_repeat	    &alpha2macro
 			>;
 		};
 
@@ -207,7 +207,7 @@
 			bindings = <
 						&kp V	&kp W	&kp M		  &kp F	&kp SQT	       	&kp Z
 				&kp Q	&kp J	&kp P	&kp K		&kp B	&td COMMA DOT	&kp X	&kp Y 
-						&sk LSHIFT	&trans		&trans	&sl AL2U	
+						&sk LSHIFT	&trans		&trans	&caps_alpha2macro	
 			>;
 		};
 
