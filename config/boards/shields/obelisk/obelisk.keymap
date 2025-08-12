@@ -81,13 +81,13 @@
 		};
 		bksp {
 			timeout-ms = <50>;
-			key-positions = <4 5>;
+			key-positions = <3 4>; // h+u uncommon bigram
 			bindings = <&kp BSPC>;
 			layers = <AL1 AL2 AL2U>;
 		};
 		ret {
 			timeout-ms = <50>;
-			key-positions = <11 12>;
+			key-positions = <3 5>; // h+o uncommon bigram
 			bindings = <&kp RET>;
 			layers = <AL1 AL2 AL2U>;
 		};
