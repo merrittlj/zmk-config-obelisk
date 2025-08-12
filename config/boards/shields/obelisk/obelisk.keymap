@@ -31,6 +31,7 @@
 #define AL2U 7
 #define IMG 8
 #define GAME 9
+#define GAMEN 10
 / { 
 	combos {
 		compatible = "zmk,combos";
@@ -80,25 +81,25 @@
 			layers = <SYS>;
 		};
 		bksp {
-			timeout-ms = <50>;
+			timeout-ms = <25>;
 			key-positions = <3 4>; // h+u uncommon bigram
 			bindings = <&kp BSPC>;
 			layers = <AL1 AL2 AL2U>;
 		};
 		ret {
-			timeout-ms = <50>;
+			timeout-ms = <25>;
 			key-positions = <3 5>; // h+o uncommon bigram
 			bindings = <&kp RET>;
 			layers = <AL1 AL2 AL2U>;
 		};
 		tab {
-			timeout-ms = <50>;
+			timeout-ms = <25>;
 			key-positions = <7 8>;
 			bindings = <&kp TAB>;
 			layers = <AL1 AL2 AL2U>;
 		};
 		esc {
-			timeout-ms = <50>;
+			timeout-ms = <25>;
 			key-positions = <0 1>;
 			bindings = <&kp ESC>;
 			layers = <AL1 AL2 AL2U>;
@@ -193,6 +194,11 @@
 			#binding-cells = <0>;
 			bindings = < &sl AL2U >;
 		};
+		game2num: behavior_macro_3 {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = < &sl GAMEN >;
+		};
 	};
 
 	//			00	01	02			03	04	05
@@ -276,9 +282,17 @@
 
 		game {
 			bindings = <
-				&kp Q	&kp E	&kp R		&none	&none	&kp BSPC
-				&kp A  &kp S &kp W				&kp D						&none	&none	&none	&kp RET
-				&kp SPACE		&kp LSHIFT								&to AL1	&kp LCTRL
+				&kp Q	&kp W	&kp E		&none	&none	&kp BSPC
+				&kp LSHIFT  &kp A &kp S				&kp D						&none	&none	&none	&kp RET
+				&kp SPACE		&game2num								&to AL1	&kp LCTRL
+			>;
+		};
+
+		gamen {
+			bindings = <
+				&kp N1	&kp N2	&kp N3		&none	&none	&none
+				&kp N7  &kp N4 &kp N5				&kp N6						&none	&none	&none	&none
+				&none		&none								&none	&none
 			>;
 		};
 	};
